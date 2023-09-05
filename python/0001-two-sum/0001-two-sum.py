@@ -5,14 +5,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        numMap = {}
-        n = len(nums)
-
-        for i in range(n):
-            complement = target - nums[i]
-            if complement in numMap:
-                return [numMap[complement], i]
-            numMap[nums[i]] = i
-
+        seen = {}
+        for i, v in enumerate(nums):
+            remaining = target - v
+            if remaining in seen:
+                return [seen[remaining], i]
+            seen[v] = i
         return []
-                
