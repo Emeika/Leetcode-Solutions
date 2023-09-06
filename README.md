@@ -1,6 +1,6 @@
 # Leetcode-Solutions
 
-========
+<hr>
 
 ### Arrays & Hashing
 
