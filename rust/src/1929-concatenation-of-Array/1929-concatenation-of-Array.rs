@@ -1,4 +1,4 @@
-'''
+/*
 Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
 
 Specifically, ans is the concatenation of two nums arrays.
@@ -13,16 +13,19 @@ Explanation: The array ans is formed as follows:
 - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
 - ans = [1,2,1,1,2,1]
 
-'''
-class Solution(object):
-    def getConcatenation(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        n = len(nums)
-        ans = []
-        ans[:] = nums[:]
-        for i in range(n):
-            ans.append(nums[i])
-        return ans
+*/
+
+struct Solution;
+impl Solution {
+    pub fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {
+        let mut ans = nums.clone();
+        ans.extend(ans.clone());
+        ans
+    }
+}
+
+fn main() {
+    let nums: Vec<i32> = [1, 2, 1].to_vec();
+    let res = Solution::get_concatenation(nums);
+    println!("{:?}", res);
+}
