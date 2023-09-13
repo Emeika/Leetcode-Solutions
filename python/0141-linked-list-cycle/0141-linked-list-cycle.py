@@ -31,5 +31,19 @@ class Solution(object):
             if slow == fast:
                 return True
         return False
+
+        """
+        OR  using hashing
+
+        check = set()
+        temp = head
+        while temp:
+            if temp in check:
+                return True
+            check.add(temp)
+                
+            temp = temp.next
+        return False
+        """
         
         
