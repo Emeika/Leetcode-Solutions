@@ -22,4 +22,21 @@ class Solution:
         if rev == s:
             return True
         return False
+    
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
+        if x[0] == "-":
+            return False
+        length = len(x)
+
+        for i, j in enumerate(range(length-1, -1, -1)):
+            # compare side by side the first with last until reaches middle
+            if x[i] != x[j]:
+                return False
+        return True
+    
+
+
 
