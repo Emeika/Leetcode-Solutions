@@ -39,4 +39,18 @@ class Solution:
     
 
 
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+
+        reversed = 0
+        remaining = x
+        while remaining != 0:
+            last = remaining % 10
+            reversed = (reversed * 10) + last
+            remaining = remaining // 10
+
+        return reversed == x
+
 
