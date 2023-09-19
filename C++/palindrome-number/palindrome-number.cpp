@@ -25,3 +25,29 @@ public:
         return false;
     }
 };
+
+class Solution
+{
+public:
+    bool isPalindrome(int x) // 121
+    {
+        if (x < 0)
+        {
+            return false;
+        }
+        int last = 0;
+        int remaining = x;
+        long rev = 0;
+        while (remaining > 0)
+        {
+            last = remaining % 10;
+            remaining /= 10;
+            rev = rev * 10 + last;
+        }
+        if (rev == x)
+        {
+            return true;
+        }
+        return false;
+    }
+};
