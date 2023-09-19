@@ -32,7 +32,6 @@ class Solution:
         length = len(x)
 
         for i, j in enumerate(range(length-1, -1, -1)):
-            # compare side by side the first with last until reaches middle
             if x[i] != x[j]:
                 return False
         return True
@@ -52,5 +51,3 @@ class Solution:
             remaining = remaining // 10
 
         return reversed == x
-
-
