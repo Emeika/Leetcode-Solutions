@@ -51,3 +51,28 @@ public:
         return false;
     }
 };
+
+class Solution
+{
+public:
+    bool isPalindrome(int x)
+    {
+        string str_x = to_string(x);
+
+        if (str_x[0] == '-')
+        {
+            return false;
+        }
+        int n = str_x.length();
+        for (int i = 0; i < n; i++)
+        {
+            char first = str_x[i];
+            char last = str_x[n - i - 1];
+            if (first != last)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
